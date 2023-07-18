@@ -1,0 +1,13 @@
+.product-item{
+    display: inline-flex;
+    border: 8px solid white;
+}
+.product-item img{
+    height: 250px;
+    width: 287px;
+}
+.Title2{
+    margin-left: 20px;
+    font-size: larger;
+    color: darkslategray;
+}

@@ -1,12 +1,15 @@
-
 import React from 'react'
 import { Button, Container, Form, Nav, NavDropdown, Navbar } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 
-
-function Nav1() {
+function UseNavigate() {
+    const history=useNavigate();
+    const sample=()=>{
+        history("/page1");
+    }
   return (
     <div>
-        <Navbar expand="lg" className="bg-body-tertiary" fixed="top">
+     <Navbar expand="lg" className="bg-body-tertiary" fixed="top">
       <Container fluid>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdZPDYaPCq58yr4nKLmwqGqwbe-0TP6fH6Zy9y6tpj&s" alt="" padding="2px"/>
         <Navbar.Brand href="#">Home</Navbar.Brand>
@@ -18,7 +21,7 @@ function Nav1() {
             navbarScroll
           >
             <Nav.Link href="#action1">Gallery</Nav.Link>
-            <Nav.Link href="/DummyApi">API</Nav.Link>
+            <Nav.Link href="">API</Nav.Link>
             <NavDropdown title="Menu" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">North Indian</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
@@ -42,7 +45,7 @@ function Nav1() {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button variant="outline-success" onClick={sample}>click</Button>
           </Form>
         </Navbar.Collapse>
       </Container>
@@ -51,4 +54,4 @@ function Nav1() {
   )
 }
 
-export default Nav1
+export default UseNavigate
